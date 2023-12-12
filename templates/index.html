@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caesar Cipher Encryption</title>
+</head>
+<body>
+    <h1>Caesar Cipher Encryption</h1>
+    <form method="post">
+        <label for="plaintext">Input Text:</label>
+        <input type="text" id="plaintext" name="plaintext" required><br><br>
+        <label for="shift">Shift:</label>
+        <input type="number" id="shift" name="shift" min="1" max="25" value="3" required><br><br>
+        <button type="submit">Encrypt</button><br><br>
+    </form>
+    {% if ciphertext %}
+        <label for="ciphertext">Encrypted Text:</label>
+        <input type="text" id="ciphertext" value="{{ ciphertext }}" readonly>
+    {% endif %}
+</body>
+</html>
